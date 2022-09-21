@@ -1,0 +1,35 @@
+{
+  "name": "cadastro-de-clientes-full-stack",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:kennedybm/cadastro-de-clientes-full-stack.git",
+  "author": "kennedybm <kennedy_muniz@hotmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "ts-node-dev --ignore-watch node_modules src/app.ts",
+    "build": "tsc",
+    "typeorm": "typeorm-ts-node-commonjs",
+    "start": "node dist/app.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1",
+    "express-async-errors": "^3.1.1",
+    "jsonwebtoken": "^8.5.1",
+    "pg": "^8.8.0",
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "^0.3.10",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.2",
+    "@types/express": "^4.17.14",
+    "@types/jsonwebtoken": "^8.5.9",
+    "@types/node": "^18.7.18",
+    "@types/uuid": "^8.3.4",
+    "ts-node": "^10.9.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^4.8.3"
+  }
+}
