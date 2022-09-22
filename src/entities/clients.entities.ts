@@ -16,7 +16,7 @@ export class Clients {
   @Column({ length: 11, unique: true })
   mobileNumber: string;
 
-  @Column({ type: Date })
+  @Column({ type: "date" })
   registerDate: Date;
 
   @OneToMany(() => Contacts, (contacts) => contacts.client)

@@ -19,5 +19,37 @@ class ClientControllers {
     const list = await ClientsServices.listClientsService();
     return res.status(200).json(list);
   }
+
+  static async retrieveClient(req: Request, res: Response) {
+    const { id } = req.params;
+
+    const client = await ClientsServices.retrieveClientService(id);
+
+    return res.status(200).json(client);
+  }
+
+  static async updateClient(req: Request, res: Response) {
+    const { id } = req.params;
+    const { name, email, mobileNumber } = req.body;
+
+    const updated = await ClientsServices.updateClientService(id, {
+      name,
+      email,
+      mobileNumber,
+    });
+
+    return res.status(200).json({
+      message: "Updated with success!",
+    });
+  }
+
+  static async deleteClient(req: Request, res: Response) {
+    const { id } = req.params;
+    const deleted = await ClientsServices.deleteClientService(id);
+
+    return res.status(200).json({
+      message: "Deleted with success!",
+    });
+  }
 }
 export default ClientControllers;
