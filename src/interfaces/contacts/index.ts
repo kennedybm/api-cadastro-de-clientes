@@ -1,12 +1,10 @@
-export interface IClientCreate {
+export interface IContactCreate {
   name: string;
   email: string;
-  password: string;
   mobileNumber: string;
-  registerDate: Date;
 }
 
-export interface IClientUpdate {
+export interface IContactUpdate {
   name?: string;
   email?: string;
   mobileNumber?: string;

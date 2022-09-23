@@ -1,13 +1,14 @@
 import { Request, Response } from "express";
-import ClientsServices from "../../services/clients/clients.service";
+import ClientsServices from "../../services/clients/clients.services";
 
 class ClientControllers {
   static async createClient(req: Request, res: Response) {
-    const { name, email, mobileNumber, registerDate } = req.body;
+    const { name, email, password, mobileNumber, registerDate } = req.body;
 
     const newClient = await ClientsServices.createClientService({
       name,
       email,
+      password,
       mobileNumber,
       registerDate,
     });

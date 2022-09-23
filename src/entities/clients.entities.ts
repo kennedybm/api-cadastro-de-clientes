@@ -13,13 +13,16 @@ export class Clients {
   @Column({ length: 50, unique: true })
   email: string;
 
+  @Column({ length: 100 })
+  password: string;
+
   @Column({ length: 11, unique: true })
   mobileNumber: string;
 
   @Column({ type: "date" })
   registerDate: Date;
 
-  @OneToMany(() => Contacts, (contacts) => contacts.client)
+  @OneToMany(() => Contacts, (contacts) => contacts.client, { eager: true })
   contacts: Contacts[];
 
   constructor() {
