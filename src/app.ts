@@ -2,12 +2,14 @@ import "dotenv/config";
 import express from "express";
 import "express-async-errors";
 import "reflect-metadata";
+import cors from "cors";
 import routesClients from "./routers/clients/clients.routes";
 import routesContacts from "./routers/contacts/contacts.routes";
 import routesSessions from "./routers/sessions/sessions.routes";
 import handleAppErrorMiddleware from "./middlewares/handleAppError.middlewares";
 
 const app = express();
+app.use(cors());
 app.use(express.json());
 
 app.use("/login", routesSessions);
