@@ -9,6 +9,7 @@ import routesSessions from "./routers/sessions/sessions.routes";
 import handleAppErrorMiddleware from "./middlewares/handleAppError.middlewares";
 
 const app = express();
+
 app.use(cors());
 app.use(express.json());
 
